@@ -1,0 +1,104 @@
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+}
+
+/* Container styling for each counter */
+.container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin: 15px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  font-size: 1.6em;
+  color: #444;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.value {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #bbda0d;
+  margin: 15px 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.value.positive {
+  color: #28a745;
+}
+
+.value.negative {
+  color: #ff4d4f;
+}
+
+/* Button container for layout */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button styling */
+.btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  outline: none;
+}
+
+/* Button color styles */
+.decrease {
+  background-color: #380742;
+}
+
+.reset {
+  background-color: #7dc7d4;
+}
+
+.increase {
+  background-color: #161e8f;
+}
+
+/* Hover and active effects */
+.btn:hover {
+  opacity: 0.95;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive hover effect on smaller screens */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}
